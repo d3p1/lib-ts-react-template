@@ -12,6 +12,11 @@ import RendererManager from '../services/renderer-manager.js'
 
 export default class App {
   /**
+   * @type {HTMLCanvasElement}
+   */
+  canvas: HTMLCanvasElement
+
+  /**
    * @type {RendererManager}
    */
   #rendererManager: RendererManager
@@ -42,6 +47,7 @@ export default class App {
    * @param {HTMLCanvasElement} canvas
    */
   constructor(canvas: HTMLCanvasElement) {
+    this.canvas = canvas
     this.#rendererManager = new RendererManager(canvas)
     this.#pointerManager = new PointerManager()
 
@@ -55,14 +61,8 @@ export default class App {
    * @returns {void}
    */
   dispose(): void {
-    this.#rendererManager.canvas.removeEventListener(
-      'pointermove',
-      this.#boundPointerMove,
-    )
-    this.#rendererManager.canvas.removeEventListener(
-      'pointerleave',
-      this.#boundPointerLeave,
-    )
+    this.canvas.removeEventListener('pointermove', this.#boundPointerMove)
+    this.canvas.removeEventListener('pointerleave', this.#boundPointerLeave)
 
     if (this.#animationId) {
       cancelAnimationFrame(this.#animationId)
@@ -76,6 +76,8 @@ export default class App {
    * @returns {void}
    */
   #animate(t: number = 0): void {
+    this.#rendererManager.clear()
+
     const rad = Mathy.lerp(
       config.circle.radius.min,
       config.circle.radius.max,
@@ -105,10 +107,7 @@ export default class App {
       this.#pointerManager.update(e.offsetX, e.offsetY)
     }
 
-    this.#rendererManager.canvas.addEventListener(
-      'pointermove',
-      this.#boundPointerMove,
-    )
+    this.canvas.addEventListener('pointermove', this.#boundPointerMove)
   }
 
   /**
@@ -121,9 +120,6 @@ export default class App {
       this.#pointerManager.update(null, null)
     }
 
-    this.#rendererManager.canvas.addEventListener(
-      'pointerleave',
-      this.#boundPointerLeave,
-    )
+    this.canvas.addEventListener('pointerleave', this.#boundPointerLeave)
   }
 }

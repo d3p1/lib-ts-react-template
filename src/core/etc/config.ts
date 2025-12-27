@@ -10,7 +10,7 @@ export const config = {
       max: 50,
       default: 25,
       movement: {
-        frequency: 0.01,
+        frequency: 0.002,
       },
     },
   },
