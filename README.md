@@ -1,18 +1,18 @@
 <div align=center>
 
-# [IMAGE2PXL]
+# [LIBRARY TYPESCRIPT-REACT TEMPLATE]
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Release](https://github.com/d3p1/img2pxl/actions/workflows/release.yml/badge.svg)](https://github.com/d3p1/img2pxl/actions/workflows/release.yml)
+[![Release](https://github.com/d3p1/lib-ts-react-template/actions/workflows/release.yml/badge.svg)](https://github.com/d3p1/lib-ts-react-template/actions/workflows/release.yml)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 </div>
 
 > [!NOTE]
-> Things to mention: `devcontainer`, `.github`, `husky`, `.run`, `commitlint`, `prettier`, package.json settings, vite config, externalize dependencies, explain why react and react-dom are added as dev dependencies, explain how to configure the IDE (Prettier and Startup services), explain local page and demo page and how to configure GitHub pages
+> Things to mention: `devcontainer`, `.github`, `husky`, `.run`, `commitlint`, `prettier`, package.json settings, vite config, externalize dependencies, explain why react and react-dom are added as dev dependencies, explain how to configure the IDE (Prettier and Startup services), explain local page and demo page and how to configure GitHub pages. Mentions configure token actions
 
 > [!NOTE]
-> Add examples of libraries created using this template. Explain folder structure for lib development
+> Add examples of libraries created using this template. Explain folder structure for lib development.
 
 ## Introduction
 
@@ -20,7 +20,7 @@ An efficient image-to-pixel transformation with motion effects, leveraging WebGL
 
 <div align="center">
 
-![Demo](https://raw.githubusercontent.com/d3p1/img2pxl/main/doc/media/demo.gif)
+![Demo](https://raw.githubusercontent.com/d3p1/lib-ts-react-template/main/doc/media/demo.gif)
 
 </div>
 
@@ -42,7 +42,7 @@ An efficient image-to-pixel transformation with motion effects, leveraging WebGL
 You can install this library using a package manager like `npm`:
 
 ```javascript
-npm install @d3p1/img2pxl
+npm install @d3p1/lib-ts-react-template
 ```
 
 Or you can use a CDN like [jsDelivr](https://www.jsdelivr.com/) and this [importmap](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) in the `<head>` of your `html` file:
@@ -53,7 +53,7 @@ Or you can use a CDN like [jsDelivr](https://www.jsdelivr.com/) and this [import
   <script type="importmap">
     {
       "imports": {
-        "@d3p1/img2pxl": "https://cdn.jsdelivr.net/npm/@d3p1/img2pxl@<version>/dist/img2pxl.min.js",
+        "@d3p1/lib-ts-react-template": "https://cdn.jsdelivr.net/npm/@d3p1/lib-ts-react-template@<version>/dist/lib-ts-react-template.min.js",
         "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.min.js",
         "tweakpane": "https://cdn.jsdelivr.net/npm/tweakpane@<version>/dist/tweakpane.min.js"
       }
@@ -64,20 +64,20 @@ Or you can use a CDN like [jsDelivr](https://www.jsdelivr.com/) and this [import
 ```
 
 > [!NOTE]
-> Remember to replace the `<version>` with the actual version of `img2pxl` and its peer dependencies ([`three`](https://github.com/mrdoob/three.js) and [`tweakpane`](https://github.com/cocopon/tweakpane)). To do that, you can check the [`package.json`](https://github.com/d3p1/img2pxl/blob/main/package.json) of the last release and get required versions from there.
+> Remember to replace the `<version>` with the actual version of `lib-ts-react-template` and its peer dependencies ([`three`](https://github.com/mrdoob/three.js) and [`tweakpane`](https://github.com/cocopon/tweakpane)). To do that, you can check the [`package.json`](https://github.com/d3p1/lib-ts-react-template/blob/main/package.json) of the last release and get required versions from there.
 
 ## Usage
 
 Using this library is straightforward:
 
-1. Go to our [builder page](https://d3p1.github.io/img2pxl/) and make the desired customizations in the tweak panel to achieve the desired effect.
+1. Go to our [builder page](https://d3p1.github.io/lib-ts-react-template/) and make the desired customizations in the tweak panel to achieve the desired effect.
 
 2. Use the `Copy` button to obtain the configuration that produces the desired effect.
 
 3. Instantiate the library with the configuration copied in the previous step, for example:
 
 ```javascript
-import Img2Pxl from '@d3p1/img2pxl'
+import Img2Pxl from '@d3p1/lib-ts-react-template'
 
 new Img2Pxl({
   images: {
@@ -117,7 +117,7 @@ new Img2Pxl({
 ```
 
 > [!NOTE]
-> To gain a deeper understanding of how to use this library and how it works under the hood, visit the [wiki page](https://github.com/d3p1/img2pxl/wiki) _(in progress)_.
+> To gain a deeper understanding of how to use this library and how it works under the hood, visit the [wiki page](https://github.com/d3p1/lib-ts-react-template/wiki) _(in progress)_.
 
 ## Changelog
 
