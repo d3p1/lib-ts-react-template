@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/d3p1/lib-ts-react-template#readme",
   "dependencies": {
-    "@d3p1/lib-ts-react-template": "^0.0.0",
+    "@d3p1/lib-ts-react-template": "^1.0.2",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
