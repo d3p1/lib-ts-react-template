@@ -12,7 +12,7 @@
 > Things to mention: `devcontainer`, `.github`, `husky`, `.run`, `commitlint`, `prettier`, package.json settings, vite config, externalize dependencies, explain why react and react-dom are added as dev dependencies, explain how to configure the IDE (Prettier and Startup services), explain local page and demo page and how to configure GitHub pages. Mentions configure token actions
 
 > [!NOTE]
-> Add examples of libraries created using this template. Explain folder structure for lib development. Mention that to create a granular token only for the specific package, it is required to publish manually for the first time `npm publish`. Also, mention that the token should by pass 2FA. Mentions `tsconfig.app.json` option to allow jsx in `dev` folder.
+> Add examples of libraries created using this template. Explain folder structure for lib development. Mention that to create a granular token only for the specific package, it is required to publish manually for the first time `npm publish`. Also, mention that the token should by pass 2FA. Mentions `tsconfig.app.json` option to allow jsx in `dev` folder. Explain `vite-plugin-dts` config.
 
 ## Introduction
 
