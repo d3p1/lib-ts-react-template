@@ -4,20 +4,20 @@
   "description": "A template to build a library using TypeScript with a Vanilla and React entry points",
   "private": false,
   "type": "module",
-  "main": "./dist/core/index.js",
-  "module": "./dist/core/index.js",
-  "types": "./dist/core/index.d.ts",
+  "main": "./dist/core.js",
+  "module": "./dist/core.js",
+  "types": "./dist/core.d.ts",
   "exports": {
     "./core": {
       "import": {
         "types": "./dist/core/index.d.ts",
-        "default": "./dist/core/index.js"
+        "default": "./dist/core.js"
       }
     },
     "./react": {
       "import": {
         "types": "./dist/react/index.d.ts",
-        "default": "./dist/react/index.js"
+        "default": "./dist/react.js"
       }
     }
   },

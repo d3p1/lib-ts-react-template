@@ -26,5 +26,12 @@ export default defineConfig({
       external: ['react', 'react-dom'],
     },
   },
-  plugins: [react(), tailwindcss(), dts()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({
+      tsconfigPath: resolve(__dirname, 'tsconfig.app.json'),
+      exclude: ['node_modules/**', 'dev/**'],
+    }),
+  ],
 })
