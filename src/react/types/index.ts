@@ -4,3 +4,7 @@
  * @note        Add specific types related to React implementation.
  *              Types could extend from core types
  */
+export interface MotionCircle {
+  backgroundColor?: string
+  circleColor?: string
+}
