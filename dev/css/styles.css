@@ -12,6 +12,6 @@
 
 @layer base {
     canvas {
-        @apply border-solid border-5 border-accent
+        @apply border-solid border-5 border-accent;
     }
 }
