@@ -5,9 +5,9 @@
  *              that orchestrate components and services to
  *              deliver complete, reusable application features
  */
-import {config} from '../etc/config.ts'
+import {config} from '../etc/config.js'
 import Mathy from '../utils/Mathy.js'
-import PointerManager from '../services/pointer-manager.ts'
+import PointerManager from '../services/pointer-manager.js'
 import RendererManager from '../services/renderer-manager.js'
 
 export default class App {
