@@ -6,118 +6,45 @@
 [![Release](https://github.com/d3p1/lib-ts-react-template/actions/workflows/release.yml/badge.svg)](https://github.com/d3p1/lib-ts-react-template/actions/workflows/release.yml)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-</div>
-
-> [!NOTE]
-> Things to mention: `devcontainer`, `.github`, `husky`, `.run`, `commitlint`, `prettier`, package.json settings, vite config, externalize dependencies, explain why react and react-dom are added as dev dependencies, explain how to configure the IDE (Prettier and Startup services), explain local page and demo page and how to configure GitHub pages. Mentions configure token actions
-
-> [!NOTE]
-> Add examples of libraries created using this template. Explain folder structure for lib development. Mention that to create a granular token only for the specific package, it is required to publish manually for the first time `npm publish`. Also, mention that the token should by pass 2FA. Mentions `tsconfig.app.json` option to allow jsx in `dev` folder. Explain `vite-plugin-dts` config. Explain how to work locally with your package inside `dev`: `npm init` and `npm install ../` 
+</div> 
 
 ## Introduction
 
-An efficient image-to-pixel transformation with motion effects, leveraging WebGL's hardware acceleration through [Three.js](https://threejs.org/):
+A template to build [TypeScript](https://www.typescriptlang.org/) libraries with both [Vanilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [React](https://react.dev/) entry points.
 
-<div align="center">
-
-![Demo](https://raw.githubusercontent.com/d3p1/lib-ts-react-template/main/doc/media/demo.gif)
-
-</div>
-
-> [!TIP]
-> The approach of this implementation bypasses the performance limitations of the 2D canvas API, enabling smooth and dynamic visual effects directly on the GPU.
-
-> [!TIP]
-> If you would like to implement a similar effect on a 3D model, you can use the related library [`d3p1/thr2pxl`](https://github.com/d3p1/thr2pxl), which uses [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units) to achieve it with high performance.
-
-> [!NOTE]
-> This library was inspired by these excellent tutorials:
-> - [Three.js Journey - Particle Cursor Animation Shader](https://threejs-journey.com/lessons/particles-cursor-animation-shader).
-> - [Learn Creative Coding: Image Effects](https://www.youtube.com/watch?v=UeZ1pTg_nMo).
-> - [Image into Interactive Particles - HTML Canvas Animation Tutorial | Advanced Pure Vanilla JavaScript](https://www.youtube.com/watch?v=afdHgwn1XCY). 
-
-
-## Installation
-
-You can install this library using a package manager like `npm`:
-
-```javascript
-npm install @d3p1/lib-ts-react-template
-```
-
-Or you can use a CDN like [jsDelivr](https://www.jsdelivr.com/) and this [importmap](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) in the `<head>` of your `html` file:
-
-```html
-<head>
-  ...
-  <script type="importmap">
-    {
-      "imports": {
-        "@d3p1/lib-ts-react-template": "https://cdn.jsdelivr.net/npm/@d3p1/lib-ts-react-template@<version>/dist/lib-ts-react-template.min.js",
-        "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.min.js",
-        "tweakpane": "https://cdn.jsdelivr.net/npm/tweakpane@<version>/dist/tweakpane.min.js"
-      }
-    }
-  </script>
-  ...
-</head>
-```
-
-> [!NOTE]
-> Remember to replace the `<version>` with the actual version of `lib-ts-react-template` and its peer dependencies ([`three`](https://github.com/mrdoob/three.js) and [`tweakpane`](https://github.com/cocopon/tweakpane)). To do that, you can check the [`package.json`](https://github.com/d3p1/lib-ts-react-template/blob/main/package.json) of the last release and get required versions from there.
+The goal of this template is to simplify the process of creating, maintaining, and publishing libraries. It provides a ready-to-use setup with sensible defaults, including an [automated release workflow triggered on every push to the repository](./.github/workflows/release.yml).
 
 ## Usage
 
 Using this library is straightforward:
 
-1. Go to our [builder page](https://d3p1.github.io/lib-ts-react-template/) and make the desired customizations in the tweak panel to achieve the desired effect.
+1. Click [`Use this template`](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) button to create a fresh repository that uses this template.
 
-2. Use the `Copy` button to obtain the configuration that produces the desired effect.
+2. Update the [`package.json`](./package.json) file so it reflects your library information and needs:
+   - `name`: Set your library name.
+   - `version`: Start a fresh library with version `0.0.0`.
+   - `description`: Add a useful description.
+   - `repository`: Define repository information.
+   - `author`: Add author information.
+   - `bugs`: Set page where the community can report issues.
+   - `homepage`: Define a proper homepage for your library. For instance, a link to its [`README.md`](./README.md) file.
+   - `keywords`: Add proper keywords.
 
-3. Instantiate the library with the configuration copied in the previous step, for example:
+3. Install project dependencies with `npm install` and run the development server with `npm run dev`.
 
-```javascript
-import Img2Pxl from '@d3p1/lib-ts-react-template'
+4. Start your library development. This template comes with sample code inside the [`src` folder](./src). The only important thing to notice is that every feature your library wants to export should be defined inside [`src/core/index.ts`](./src/core/index.ts) and [`src/react/index.ts`](./src/react/index.ts). This is because [they are defined as the entry points of your library](./vite.config.ts). 
 
-new Img2Pxl({
-  images: {
-    0: {
-      src: <image-src>,
-      width: <image-width>,
-      height: <image-height>,
-      resolution: {
-        width: <image-resolution-width>,
-        height: <image-resolution-height>
-      },
-      pixel: {
-        size: 2,
-        alphaTest: 0.9,
-        motion: {
-          displacement: {
-            frequency: 1,
-            amplitude: 40,
-          },
-        },
-      },
-      motion: {
-        noise: {
-          frequency: 0.025,
-          amplitude: 40,
-        },
-      },
-    },
-  },
-  pointer: {
-    size: 0.1,
-    trailing: {
-      factor: 0.01
-    }
-  }
-})
-```
+5. Install your library in the development site that comes with this template to do a quick validation. Go to [`dev folder`](./dev), remove the `dependencies` from the [`package.json`](./dev/package.json), and execute `npm install ../`. This will install the library so you can consume it. Update the [sample code](./dev/index.html) that comes with this site and visit `http://localhost:5173/dev/` to check the implementation.
+
+6. Once your library development is completed, you can start the implementation of a demo site. This template comes with a [Next.js](https://nextjs.org/) sample site inside the [`www folder`](./www). There is a [GitHub Action that deploys it on every push](./.github/workflows/deploy-demo.yml). To begin with, update the `basePath` setting inside the [`next.config.ts`](./www/next.config.ts). It should match your repository slug (e.g. `/my-repo-name/`). Then, you can update the [sample code](./www/app) and visit `http://localhost:3000/my-repo-name` to check the implementation. Finally, remember to [enable GitHub Pages with GitHub Actions for your repository](http://localhost:3000/lib-ts-react-template).  
+
+7. Finally, update the [`README.md`](./README.md) so it explains what your library does and how to use it. Remember to update the `release` badge that appears at the top of this [`README.md`](./README.md) if you keep them. It is pointing to this repository.  
 
 > [!NOTE]
-> To gain a deeper understanding of how to use this library and how it works under the hood, visit the [wiki page](https://github.com/d3p1/lib-ts-react-template/wiki) _(in progress)_.
+> To gain a deeper understanding of how to use this library and how it works under the hood, visit the [wiki page](https://github.com/d3p1/lib-ts-react-template/wiki).
+
+> [!NOTE]
+> There is a [ticket](https://github.com/d3p1/lib-ts-react-template/issues/4) to add testing tools to improve the library's validation workflow.
 
 ## Changelog
 
