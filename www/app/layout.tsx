@@ -7,7 +7,7 @@ import './css/globals.css'
 
 export const metadata: Metadata = {
   title: 'My Lib',
-  description: 'Lib usage example',
+  description: 'Lib demo',
 }
 
 export default function RootLayout({
