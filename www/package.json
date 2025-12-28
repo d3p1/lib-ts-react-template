@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/d3p1/lib-ts-react-template#readme",
   "dependencies": {
+    "@d3p1/lib-ts-react-template": "^0.0.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
@@ -29,8 +30,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
     "eslint-config-prettier": "^10.1.5",
-    "prettier": "3.0.3",
     "husky": "8.0.3",
+    "prettier": "3.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

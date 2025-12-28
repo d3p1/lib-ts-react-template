@@ -3,3 +3,15 @@
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --color-accent: #aaa;
+}
+
+@layer base {
+    canvas {
+        @apply border-solid border-5 border-accent;
+    }
+}
