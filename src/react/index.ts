@@ -6,4 +6,4 @@
  */
 export {default as CanvasMotionCircle} from './components/CanvasMotionCircle.jsx'
 export {default as useMotionCircle} from './hooks/useMotionCircle.js'
-export * from './types/index.js'
+export * from './types'

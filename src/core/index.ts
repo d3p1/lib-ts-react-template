@@ -5,4 +5,4 @@
  *              library consumers (feature implementation and types)
  */
 export {default as MyLib} from './app/index.js'
-export * from './types/index.js'
+export * from './types'
