@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/d3p1/lib-ts-react-template/compare/v1.0.2...v1.1.0) (2025-12-28)
+
+
+### Features
+
+* improve demo page [[#1](https://github.com/d3p1/lib-ts-react-template/issues/1)] ([5d3c280](https://github.com/d3p1/lib-ts-react-template/commit/5d3c28050627fcc9516e40307adb171bafa42766))
+
 ## [1.0.2](https://github.com/d3p1/lib-ts-react-template/compare/v1.0.1...v1.0.2) (2025-12-28)
 
 
