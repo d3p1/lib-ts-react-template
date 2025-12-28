@@ -1,6 +1,6 @@
 {
   "name": "@d3p1/lib-ts-react-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A template to build a library using TypeScript with a Vanilla and React entry points",
   "private": false,
   "type": "module",

@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/d3p1/lib-ts-react-template/compare/v1.1.0...v1.1.1) (2025-12-28)
+
+
+### Bug Fixes
+
+* adjust react hook and component library initialization [[#1](https://github.com/d3p1/lib-ts-react-template/issues/1)] ([710df68](https://github.com/d3p1/lib-ts-react-template/commit/710df682625589cfc59e69c97fb960b075e5983f))
+
 # [1.1.0](https://github.com/d3p1/lib-ts-react-template/compare/v1.0.2...v1.1.0) (2025-12-28)
 
 
