@@ -4,6 +4,6 @@
  * @note        Entry point that exports everything required for
  *              library consumers (feature implementation and types)
  */
-export * from './components/CanvasMotionCircle.tsx'
-export * from './hooks/useMotionCircle.ts'
+export {default as CanvasMotionCircle} from './components/CanvasMotionCircle.tsx'
+export {default as useMotionCircle} from './hooks/useMotionCircle.ts'
 export * from './types/index.ts'

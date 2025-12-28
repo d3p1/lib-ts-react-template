@@ -4,7 +4,17 @@
  * @note        The `etc` folder enclose everything related to config
  */
 export const config = {
+  canvas: {
+    background: {
+      color: {
+        default: '#fff',
+      },
+    },
+  },
   circle: {
+    color: {
+      default: '#000',
+    },
     radius: {
       min: 10,
       max: 50,

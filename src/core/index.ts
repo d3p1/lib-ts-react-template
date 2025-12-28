@@ -4,5 +4,5 @@
  * @note        Entry point that exports everything required for
  *              library consumers (feature implementation and types)
  */
-export * from './app/index.ts'
+export {default as MyLib} from './app/index.ts'
 export * from './types/index.ts'

@@ -12,15 +12,17 @@
   <link rel="stylesheet" href="./css/styles.css"/>
   <title>Lib</title>
 </head>
-<body>
-  <canvas id="canvas"></canvas>
+<body class="w-screen h-screen bg-primary text-secondary grid place-items-center">
+  <div class="flex flex-col justify-center items-center">
+    <h2 class="text-xl font-black mb-2">Vanilla</h2>
+    <canvas id="canvas-vanilla"></canvas>
+  </div>
   <script type="module">
-    import App from '../src/core/app/index.js'
-
-    const canvas = document.getElementById('canvas')
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-    new App(canvas)
+    import {MyLib} from '../src/core/index.js'
+    new MyLib(document.getElementById('canvas-vanilla'))
   </script>
+
+  <div class="flex flex-col justify-center items-center" id="react-root"></div>
+  <script type="module" src="./js/react/app.tsx"></script>
 </body>
 </html>

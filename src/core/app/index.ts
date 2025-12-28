@@ -44,11 +44,21 @@ export default class App {
   /**
    * Constructor
    *
-   * @param {HTMLCanvasElement} canvas
+   * @param {HTMLCanvasElement}  canvas
+   * @param {string | undefined} backgroundColor
+   * @param {string | undefined} circleColor
    */
-  constructor(canvas: HTMLCanvasElement) {
+  constructor(
+    canvas: HTMLCanvasElement,
+    backgroundColor?: string,
+    circleColor?: string,
+  ) {
     this.canvas = canvas
-    this.#rendererManager = new RendererManager(canvas)
+    this.#rendererManager = new RendererManager(
+      canvas,
+      backgroundColor,
+      circleColor,
+    )
     this.#pointerManager = new PointerManager()
 
     this.#initListeners()

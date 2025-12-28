@@ -19,12 +19,30 @@ export default class RendererManager {
   #context: CanvasRenderingContext2D
 
   /**
+   * @type {string}
+   */
+  readonly #backgroundColor: string
+
+  /**
+   * @type {string}
+   */
+  readonly #circleColor: string
+
+  /**
    * Constructor
    *
    * @param {HTMLCanvasElement} canvas
+   * @param {string}            backgroundColor
+   * @param {string}            circleColor
    */
-  constructor(canvas: HTMLCanvasElement) {
+  constructor(
+    canvas: HTMLCanvasElement,
+    backgroundColor: string = config.canvas.background.color.default,
+    circleColor: string = config.circle.color.default,
+  ) {
     this.#canvas = canvas
+    this.#backgroundColor = backgroundColor
+    this.#circleColor = circleColor
     this.#initContext()
   }
 
@@ -34,7 +52,8 @@ export default class RendererManager {
    * @returns {void}
    */
   clear(): void {
-    this.#context.clearRect(0, 0, this.#canvas.width, this.#canvas.height)
+    this.#context.fillStyle = this.#backgroundColor
+    this.#context.fillRect(0, 0, this.#canvas.width, this.#canvas.height)
   }
 
   /**
@@ -50,6 +69,7 @@ export default class RendererManager {
   ): void {
     if (!point.x || !point.y) return
 
+    this.#context.strokeStyle = this.#circleColor
     this.#context.beginPath()
     this.#context.arc(point.x, point.y, radius, 0, 2 * Math.PI)
     this.#context.stroke()
