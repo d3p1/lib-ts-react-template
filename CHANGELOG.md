@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/d3p1/lib-ts-react-template/compare/v1.0.1...v1.0.2) (2025-12-28)
+
+
+### Bug Fixes
+
+* adjust library package type paths [[#1](https://github.com/d3p1/lib-ts-react-template/issues/1)] ([1e95b13](https://github.com/d3p1/lib-ts-react-template/commit/1e95b1351d3edf2805de0f8e48ef7f78492f4fd6))
+
 ## [1.0.1](https://github.com/d3p1/lib-ts-react-template/compare/v1.0.0...v1.0.1) (2025-12-28)
 
 
