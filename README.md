@@ -18,13 +18,9 @@ The goal of this template is to simplify the process of creating, maintaining, a
 
 Using this library is straightforward:
 
----
-
 ### 1. Create a repository
 
 Click the **[Use this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)** button to create a new repository based on this template.
-
----
 
 ### 2. Configure `npm` authentication
 
@@ -35,8 +31,6 @@ Create an **`NPM_TOKEN` repository secret** in your new repository. The token mu
 
 > [!NOTE]
 > This token is required by the [automated release workflow](./.github/workflows/release.yml).
-
----
 
 ### 3. Update `package.json`
 
@@ -51,8 +45,6 @@ Edit the [package.json](./package.json) file to reflect your library’s metadat
 - `homepage` – Project homepage (e.g. the README)
 - `keywords` – Relevant keywords for discoverability
 
----
-
 ### 4. Install dependencies and start development
 
 Execute the following commands:
@@ -61,8 +53,6 @@ Execute the following commands:
 npm install
 npm run dev
 ```
-
----
 
 ### 5. Develop your library
 
@@ -82,8 +72,6 @@ On top of that, every commit must follow this [Conventional Commits](https://www
 > [!NOTE]
 > This is required by the [release workflow, which analyzes every commit to automatically generate the releases](./.github/workflows/release.yml).
 
----
-
 ### 6. Validate locally using the dev site
 
 This template includes a local development site under the [`dev folder`](./dev).
@@ -91,8 +79,6 @@ This template includes a local development site under the [`dev folder`](./dev).
 Remove the `dependencies` from the [`package.json`](./dev/package.json), and execute `npm install ../`. This will install the local library. 
 
 Update the [sample code](./dev/index.html) and visit `http://localhost:5173/dev/` to check the implementation.
-
----
 
 ### 7. Build a demo site
 
@@ -107,16 +93,12 @@ Then, you can update the [sample code](./www/app) and visit `http://localhost:30
 
 Finally, remember to [enable GitHub Pages with GitHub Actions for your repository](http://localhost:3000/lib-ts-react-template).
 
----
-
 ### 8. Finalize documentation
 
 Update the [`README.md`](./README.md) to describe your library’s purpose and usage.
 
 > [!IMPORTANT]
 > Don’t forget to update the release badge URL at the top of this file if you keep it — it currently points to this repository.
-
----
 
 > [!NOTE]
 > To gain a deeper understanding of how to use this library and how it works under the hood, visit the [wiki page](https://github.com/d3p1/lib-ts-react-template/wiki).
