@@ -48,7 +48,7 @@ Edit the [package.json](./package.json) file to reflect your library’s metadat
 - `repository` – Repository URL
 - `author` – Author information
 - `bugs` – Issue tracker URL
-- `homepage` – Project homepage (e.g. the README)
+- `homepage` – Project homepage (e.g. the [`README.md`](./README.md) link)
 - `keywords` – Relevant keywords for discoverability
 
 ---
@@ -122,7 +122,7 @@ Update the [`README.md`](./README.md) to describe your library’s purpose and u
 > To gain a deeper understanding of how to use this library and how it works under the hood, visit the [wiki page](https://github.com/d3p1/lib-ts-react-template/wiki).
 
 > [!NOTE]
-> At the time of writing, it seems `npm` does not support fine-grained tokens for *CD* workflows. A recommended workaround is to publish the package once using the CLI: `npm login` and then `npm publish`. Then, create a token restricted to that specific package.
+> At the time of writing, it seems `npm` does not support fine-grained tokens for *CD* workflows. A recommended workaround is to publish the package once. For instance, using the CLI: `npm login` and `npm publish`. Then, create a token restricted to that specific package.
 
 > [!NOTE]
 > There is a [ticket](https://github.com/d3p1/lib-ts-react-template/issues/4) to add testing tools to improve the library's validation workflow.
