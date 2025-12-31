@@ -15,8 +15,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        core: resolve(__dirname, 'src/core/index.ts'),
-        react: resolve(__dirname, 'src/react/index.ts'),
+        'core/index': resolve(__dirname, 'src/core/index.ts'),
+        'react/index': resolve(__dirname, 'src/react/index.ts'),
       },
       formats: ['es'],
     },
