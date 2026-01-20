@@ -1,5 +1,6 @@
 import {dirname, resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
+import preserveDirectives from 'rollup-preserve-directives'
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
@@ -32,5 +33,6 @@ export default defineConfig({
       tsconfigPath: resolve(__dirname, 'tsconfig.app.json'),
       exclude: ['node_modules/**', 'dev/**'],
     }),
+    preserveDirectives(),
   ],
 })
