@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/d3p1/lib-ts-react-template/compare/v1.1.2...v1.1.3) (2026-01-20)
+
+
+### Bug Fixes
+
+* add plugin to avoid removing use client directive on build [[#1](https://github.com/d3p1/lib-ts-react-template/issues/1)] ([751f0f7](https://github.com/d3p1/lib-ts-react-template/commit/751f0f74771a15f22cd0c3b4b9f8cec7f7806a75))
+
 ## [1.1.2](https://github.com/d3p1/lib-ts-react-template/compare/v1.1.1...v1.1.2) (2025-12-31)
 
 
