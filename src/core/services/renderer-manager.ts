@@ -8,79 +8,81 @@ import {config} from '../etc/config.js'
 import type {Point} from '../types'
 
 export default class RendererManager {
-  /**
-   * @type {HTMLCanvasElement}
-   */
-  #canvas: HTMLCanvasElement
+    /**
+     * @type {HTMLCanvasElement}
+     */
+    #canvas: HTMLCanvasElement
 
-  /**
-   * @type {CanvasRenderingContext2D}
-   */
-  #context: CanvasRenderingContext2D
+    /**
+     * @type {CanvasRenderingContext2D}
+     */
+    #context: CanvasRenderingContext2D
 
-  /**
-   * @type {string}
-   */
-  readonly #backgroundColor: string
+    /**
+     * @type {string}
+     */
+    readonly #backgroundColor: string
 
-  /**
-   * @type {string}
-   */
-  readonly #circleColor: string
+    /**
+     * @type {string}
+     */
+    readonly #circleColor: string
 
-  /**
-   * Constructor
-   *
-   * @param {HTMLCanvasElement} canvas
-   * @param {string}            backgroundColor
-   * @param {string}            circleColor
-   */
-  constructor(
-    canvas: HTMLCanvasElement,
-    backgroundColor: string = config.canvas.background.color.default,
-    circleColor: string = config.circle.color.default,
-  ) {
-    this.#canvas = canvas
-    this.#backgroundColor = backgroundColor
-    this.#circleColor = circleColor
-    this.#initContext()
-  }
+    /**
+     * Constructor
+     *
+     * @param {HTMLCanvasElement} canvas
+     * @param {string}            backgroundColor
+     * @param {string}            circleColor
+     */
+    constructor(
+        canvas: HTMLCanvasElement,
+        backgroundColor: string = config.canvas.background.color.default,
+        circleColor: string = config.circle.color.default,
+    ) {
+        this.#canvas = canvas
+        this.#backgroundColor = backgroundColor
+        this.#circleColor = circleColor
+        this.#initContext()
+    }
 
-  /**
-   * Clear
-   *
-   * @returns {void}
-   */
-  clear(): void {
-    this.#context.fillStyle = this.#backgroundColor
-    this.#context.fillRect(0, 0, this.#canvas.width, this.#canvas.height)
-  }
+    /**
+     * Clear
+     *
+     * @returns {void}
+     */
+    clear(): void {
+        this.#context.fillStyle = this.#backgroundColor
+        this.#context.fillRect(0, 0, this.#canvas.width, this.#canvas.height)
+    }
 
-  /**
-   * Draw circle
-   *
-   * @param   {{x: number; y: number}} point
-   * @param   {number}                 radius
-   * @returns {void}
-   */
-  drawCircle(
-    point: Point,
-    radius: number = config.circle.radius.default,
-  ): void {
-    if (!point.x || !point.y) return
+    /**
+     * Draw circle
+     *
+     * @param   {{x: number; y: number}} point
+     * @param   {number}                 radius
+     * @returns {void}
+     */
+    drawCircle(
+        point: Point,
+        radius: number = config.circle.radius.default,
+    ): void {
+        if (!point.x || !point.y) return
 
-    this.#context.strokeStyle = this.#circleColor
-    this.#context.beginPath()
-    this.#context.arc(point.x, point.y, radius, 0, 2 * Math.PI)
-    this.#context.stroke()
-  }
+        this.#context.strokeStyle = this.#circleColor
+        this.#context.beginPath()
+        this.#context.arc(point.x, point.y, radius, 0, 2 * Math.PI)
+        this.#context.stroke()
+    }
 
-  /**
-   * Init context
-   *
-   * @returns {void}
-   */
-  #initContext(): void {
-    this.#context = this.#canvas.getContext('2d') as CanvasRenderingContext2D
-  }
+    /**
+     * Init context
+     *
+     * @returns {void}
+     */
+    #initContext(): void {
+        this.#context = this.#canvas.getContext(
+            '2d',
+        ) as CanvasRenderingContext2D
+    }
 }

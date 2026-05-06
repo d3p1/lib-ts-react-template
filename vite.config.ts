@@ -10,29 +10,29 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
-  server: {
-    host: true,
-  },
-  build: {
-    lib: {
-      entry: {
-        'core/index': resolve(__dirname, 'src/core/index.ts'),
-        'react/index': resolve(__dirname, 'src/react/index.ts'),
-      },
-      formats: ['es'],
+    server: {
+        host: true,
     },
-    sourcemap: true,
-    rollupOptions: {
-      external: ['react', 'react-dom'],
+    build: {
+        lib: {
+            entry: {
+                'core/index': resolve(__dirname, 'src/core/index.ts'),
+                'react/index': resolve(__dirname, 'src/react/index.ts'),
+            },
+            formats: ['es'],
+        },
+        sourcemap: true,
+        rollupOptions: {
+            external: ['react', 'react-dom'],
+        },
     },
-  },
-  plugins: [
-    react(),
-    tailwindcss(),
-    dts({
-      tsconfigPath: resolve(__dirname, 'tsconfig.app.json'),
-      exclude: ['node_modules/**', 'dev/**'],
-    }),
-    preserveDirectives(),
-  ],
+    plugins: [
+        react(),
+        tailwindcss(),
+        dts({
+            tsconfigPath: resolve(__dirname, 'tsconfig.app.json'),
+            exclude: ['node_modules/**', 'dev/**'],
+        }),
+        preserveDirectives(),
+    ],
 })

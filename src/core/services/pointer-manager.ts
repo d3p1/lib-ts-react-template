@@ -10,26 +10,26 @@
 import type {Point} from '../types'
 
 export default class PointerManager {
-  /**
-   * @type {{x: number | null; y: number | null}}
-   */
-  pointer: Point
+    /**
+     * @type {{x: number | null; y: number | null}}
+     */
+    pointer: Point
 
-  /**
-   * Constructor
-   */
-  constructor() {
-    this.pointer = {x: null, y: null}
-  }
+    /**
+     * Constructor
+     */
+    constructor() {
+        this.pointer = {x: null, y: null}
+    }
 
-  /**
-   * Update
-   *
-   * @param   {number | null} x
-   * @param   {number | null} y
-   * @returns {void}
-   */
-  update(x: number | null, y: number | null): void {
-    this.pointer = {x, y}
-  }
+    /**
+     * Update
+     *
+     * @param   {number | null} x
+     * @param   {number | null} y
+     * @returns {void}
+     */
+    update(x: number | null, y: number | null): void {
+        this.pointer = {x, y}
+    }
 }

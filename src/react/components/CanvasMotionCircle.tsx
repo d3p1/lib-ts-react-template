@@ -6,9 +6,9 @@ import useMotionCircle from '../hooks/useMotionCircle.js'
 import type {MotionCircle} from '../types'
 
 export default function CanvasMotionCircle(props: MotionCircle) {
-  const {canvasRef} = useMotionCircle({
-    backgroundColor: props.backgroundColor,
-    circleColor: props.circleColor,
-  })
-  return <canvas ref={canvasRef} />
+    const {canvasRef} = useMotionCircle({
+        backgroundColor: props.backgroundColor,
+        circleColor: props.circleColor,
+    })
+    return <canvas ref={canvasRef} />
 }

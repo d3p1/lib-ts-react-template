@@ -1,6 +1,11 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
     <option name="RIGHT_MARGIN" value="80" />
+    <option name="DO_NOT_FORMAT">
+      <list>
+        <fileSet type="globPattern" pattern="*.md" />
+      </list>
+    </option>
     <HTMLCodeStyleSettings>
       <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
     </HTMLCodeStyleSettings>
@@ -46,36 +51,43 @@
     <editorconfig>
       <option name="ENABLED" value="false" />
     </editorconfig>
+    <codeStyleSettings language="CSS">
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      </indentOptions>
+    </codeStyleSettings>
     <codeStyleSettings language="HTML">
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
-        <option name="INDENT_SIZE" value="2" />
-        <option name="CONTINUATION_INDENT_SIZE" value="2" />
-        <option name="TAB_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="JSON">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="4" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <option name="SOFT_MARGINS" value="80" />
-      <indentOptions>
-        <option name="INDENT_SIZE" value="2" />
-        <option name="CONTINUATION_INDENT_SIZE" value="2" />
-        <option name="TAB_SIZE" value="2" />
-      </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="LESS">
       <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
       <indentOptions>
         <option name="INDENT_SIZE" value="4" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="SASS">
       <indentOptions>
         <option name="INDENT_SIZE" value="4" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="SCSS">
       <indentOptions>
         <option name="INDENT_SIZE" value="4" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="Shell Script">
@@ -86,16 +98,21 @@
     </codeStyleSettings>
     <codeStyleSettings language="TypeScript">
       <option name="SOFT_MARGINS" value="80" />
-      <indentOptions>
-        <option name="INDENT_SIZE" value="2" />
-        <option name="CONTINUATION_INDENT_SIZE" value="2" />
-        <option name="TAB_SIZE" value="2" />
-      </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="Vue">
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
         <option name="CONTINUATION_INDENT_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="XML">
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="yaml">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="4" />
       </indentOptions>
     </codeStyleSettings>
   </code_scheme>

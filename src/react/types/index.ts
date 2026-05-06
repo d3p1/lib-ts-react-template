@@ -5,6 +5,6 @@
  *              Types could extend from core types
  */
 export interface MotionCircle {
-  backgroundColor?: string
-  circleColor?: string
+    backgroundColor?: string
+    circleColor?: string
 }
