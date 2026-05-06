@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/d3p1/lib-ts-react-template/compare/v1.1.3...v1.1.4) (2026-05-06)
+
+
+### Bug Fixes
+
+* adjust code style [[#1](https://github.com/d3p1/lib-ts-react-template/issues/1)] ([c80245c](https://github.com/d3p1/lib-ts-react-template/commit/c80245c0663661589b0585f9ad15148e4fc7f630))
+
 ## [1.1.3](https://github.com/d3p1/lib-ts-react-template/compare/v1.1.2...v1.1.3) (2026-01-20)
 
 
